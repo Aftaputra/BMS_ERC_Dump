@@ -1,0 +1,23 @@
+curl -X PUT "https://bmsmipa-default-rtdb.asia-southeast1.firebasedatabase.app/sensor_data/sensor_data_6.json" ^
+-H "Content-Type: application/json" ^
+-d "{\"timestamp\":\"29/08/2024/12:00:00\",\"temp\":25.3,\"current\":1.2,\"voltage\":3.7,\"charging\":true,\"cooler\":false,\"heater\":true,\"voltages\":[3.6,3.7,3.5,3.6,3.7,3.5,3.6,3.7,3.6,3.7,3.5,3.6],\"level\":5}"
+
+
+{
+  "rules": {
+            ".read": true,
+        ".write": true,
+    "sensor_data": {
+      "$sensor_id": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "volt_cells": {
+      "$volt_cell_id": {
+        ".read": true,
+        ".write": true
+      }
+    }
+  }
+}
